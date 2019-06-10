@@ -1,0 +1,235 @@
+/*
+Theme Name: LearningWordPress
+
+*/
+
+body{
+  font-family: helvetica;
+  font-size: 1.15rem;
+  color: #777;
+  margin:0;
+  padding:0;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+p{
+  line-height: 1.4em;
+}
+
+a:link,
+a:visited{
+  color:#006ec3;
+}
+/*  Main Navigation*/
+#menu-main-menu{
+  display:flex;
+  list-style: none;
+  margin:0;
+  padding:0;
+
+}
+#menu-main-menu li{
+  margin-right:30px;
+}
+
+#menu-main-menu li a:link,
+#menu-main-menu li a:visited
+{
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem;
+  color: #006ec3;
+  background-color:white;
+  border:1px solid #006ec3;
+  border-radius:5px;
+  font-size: 14px;
+}
+#menu-main-menu li.current-menu-item a:link,
+#menu-main-menu li.current-menu-item a:visited,
+#menu-main-menu li.current-page-ancestor a:link,
+#menu-main-menu li.current-page-ancestor a:visited{
+  background-color:#006ec3;
+  color:white;
+}
+#menu-main-menu li a:hover{
+  background-color: #ccc;
+}
+.menu-main-menu-container{
+  height:60px;
+  background-color: #ccc;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top:20px;
+}
+
+/* Children Navigation*/
+.child-nav{
+  display:flex;
+  background:#ccc;
+  padding:10px 5px;
+}
+.parent-link{
+  padding-right: 20px;
+  font-size:1.2rem;
+  color:black;
+}
+.parent-link a{
+  text-decoration: none;
+  color:black;
+}
+.children{
+  display:flex;
+  margin:0;
+  list-style: none;
+  border-left: 1px solid;
+  padding-left: 20px;
+}
+.children li{
+  margin-top:2px;
+}
+.children li a{
+  text-decoration: none;
+  margin-right:20px;
+}
+.children li.current_page_item a:link,
+.children li.current_page_item a:visited{
+  border-bottom:2px solid black;
+  color:black;
+}
+
+
+/*  General Layout*/
+div.container{
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/*  Header*/
+.site-header{
+  border-bottom: 2px solid #999;
+  margin-top:70px;
+  margin-bottom: 50px;
+}
+/*  Footer*/
+.site-footer{
+  border-top:2px solid #999;
+  margin-top: 30px;
+}
+
+article.post{
+  border-bottom:1px dotted gray;
+  margin-bottom: 30px;
+}
+article.post:last-of-type{
+  border:none;
+}
+article.has-post-thumbnail{
+  display:grid;
+  grid-gap:10px;
+  grid-template-areas:
+  'image title-meta'
+  'image content';
+}
+.post-title-meta{
+  grid-area: title-meta;
+}
+.has-post-thumbnail .post-title-meta p{
+  margin-bottom:-20px;
+}
+.has-post-thumbnail .post-title-meta h2{
+  margin:0;
+}
+.featured-image{
+  grid-area:image;
+}
+article.has-post-thumbnail.post-content{
+  grid-area:content;
+  align-self: flex-start;
+  margin-top:-30px;
+}
+article.post-link{
+  background:lightblue;
+}
+article.post-link a{
+  padding: 20px 10px;
+}
+.content-total{
+  display:flex;
+  justify-content: space-between;
+}
+.main-content{
+  width:65%;
+}
+.sidebar{
+  width:30%;
+}
+
+#menu-footer-menu{
+  display:flex;
+  list-style: none;
+  margin:0;
+  margin-bottom:20px;
+  padding:0;
+}
+
+#menu-footer-menu li a{
+  padding:0 10px;
+  border-right:1px solid #ccc;
+  text-decoration: none;
+}
+#menu-footer-menu li:first-of-type a{
+  padding-left:0;
+
+}
+
+/* Post meta styles*/
+.bloginfo{
+  margin-top:0;
+  font-style: italic;
+}
+.post h2{
+  margin-bottom:5px;
+}
+.page-title{
+  font-size:2.5rem;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/*Header Search*/
+.header-search{
+  display:flex;
+  justify-content:flex-end;
+}
+.header-search label{
+  display:none;
+}
+.header-search #searchsubmit{
+  background: #006ec3;
+  color:white;
+  padding:5px 14px;
+  border:none;
+}
+.header-search input#s{
+  height:26px;
+}
+
+.post-gallery{
+  background-color:#222 !important;
+  padding:10px;
+}
+
+.featured-posts{
+  display: flex !important;
+  justify-content: space-between;
+}
