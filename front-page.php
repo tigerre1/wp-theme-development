@@ -22,41 +22,39 @@ get_header();
 
 <div class="bird-posts">
 
-    <?php
 
-    $birdPosts = new WP_Query('cat=9&posts_per_page=2');
+<div class="grid-container">
+  <?php  $birdPosts = new WP_Query('cat=197&posts_per_page=-1');
 
     if($birdPosts->have_posts()):
           while($birdPosts->have_posts()): $birdPosts->the_post();?>
 
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-        <?php  endwhile;
+    <div class="card">
+    <?php the_post_thumbnail('medium'); ?>
+    <div class="card-body ">
+      <h4 class="card-title "><?php the_title(); ?></h4>
+      <p class="card-text "><?php the_excerpt(); ?></p>
+      <a href="<?php the_permalink(); ?>" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 
+
+
+        <?php  endwhile;?>
+
+
+
+<?php
         else:
           //fallback
 
-      endif;
-      wp_reset_postdata(); ?>
+      endif; ?>
+      </div>
+    <?php   wp_reset_postdata(); ?>
   </div> <!-- end of $birdPosts -->
 
-  <div class="politics-posts">
 
-  <?php $politicsPosts = new WP_Query('cat=6&posts_per_page=2');
-
-  if($politicsPosts->have_posts()):
-        while($politicsPosts->have_posts()): $politicsPosts->the_post();?>
-
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-      <?php  endwhile;
-
-      else:
-        //fallback
-
-    endif;
-    wp_reset_postdata(); ?>
-  </div>
 
 </div>
 

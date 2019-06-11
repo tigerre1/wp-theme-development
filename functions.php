@@ -1,7 +1,7 @@
 <?php
 
 function learningWordPress_resources(){
-
+  wp_enqueue_style('bs-style','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
   wp_enqueue_style('style', get_stylesheet_uri());
 
 }

@@ -233,3 +233,10 @@ img{
   display: flex !important;
   justify-content: space-between;
 }
+
+.grid-container{
+  display:grid !important;
+  grid-gap:10px;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
