@@ -1,7 +1,7 @@
 <?php
 
 function learningWordPress_resources(){
-  wp_enqueue_style('bs-style','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
   wp_enqueue_style('style', get_stylesheet_uri());
 
 }
@@ -31,8 +31,9 @@ function has_children(){
 
 /*Custom excerpt word count*/
 
+
 function excerpt_word_count(){
-  return 25;
+  return 15;
 }
 add_filter('excerpt_length','excerpt_word_count');
 

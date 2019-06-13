@@ -1,6 +1,6 @@
 <?php wp_footer();
 
-if(!is_singular('post') and !is_singular('page') and !is_archive()){
+if(!is_singular('post') and !is_singular('ohjaaja') and !is_singular('page') and !is_archive()){
   echo '</div>'; //End of content total
 }?>
 

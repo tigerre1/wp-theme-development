@@ -30,14 +30,7 @@ get_header();
           while($birdPosts->have_posts()): $birdPosts->the_post();?>
 
 
-    <div class="card">
-    <?php the_post_thumbnail('medium'); ?>
-    <div class="card-body ">
-      <h4 class="card-title "><?php the_title(); ?></h4>
-      <p class="card-text "><?php the_excerpt(); ?></p>
-      <a href="<?php the_permalink(); ?>" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+
 
 
 
@@ -46,10 +39,10 @@ get_header();
 
 
 <?php
-        else:
-          //fallback
+else: ?>
+          <h1>Nothing to Declare</h1>
 
-      endif; ?>
+    <?php  endif; ?>
       </div>
     <?php   wp_reset_postdata(); ?>
   </div> <!-- end of $birdPosts -->

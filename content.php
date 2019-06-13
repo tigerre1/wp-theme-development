@@ -33,7 +33,7 @@
     <?php if(is_search() OR is_archive()){
         echo get_the_excerpt(); ?>
       <a href="<?php the_permalink(); ?>">Read More &raquo</a>
-    <?php }elseif($post->post_excerpt OR !is_singular('post')){ ?>
+    <?php }elseif($post->post_excerpt OR !is_singular()){ ?>
         <p>
               <?php  echo get_the_excerpt(); ?>
               <a href="<?php the_permalink(); ?>">Read More &raquo</a>
